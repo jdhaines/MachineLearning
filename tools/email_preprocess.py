@@ -56,7 +56,7 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
     selector = SelectPercentile(f_classif, percentile=1)
     selector.fit(features_train_transformed, labels_train)
     features_train_transformed = selector.transform(features_train_transformed).toarray()
-    features_test_transformed  = selector.transform(features_test_transformed).toarray()
+    features_test_transformed = selector.transform(features_test_transformed).toarray()
 
     ### info on the data
     print "no. of Chris training emails:", sum(labels_train)
