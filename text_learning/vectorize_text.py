@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+"""Docstring Here."""
+
 import os
 import pickle
 import sys
@@ -51,7 +53,8 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
             email = open(path, "r")
 
             # ## use parseOutText to extract the text from the opened email
-            bad_words = ['Sara', 'Chris', 'Germani', 'Shackleton']
+            bad_words = ['Sara', 'Chris', 'Germani', 'Shackleton',
+                         'sshacklensf']
             raw_text = parseOutText(email, bad_words)
 
             # ## use str.replace() to remove any instances of the words
