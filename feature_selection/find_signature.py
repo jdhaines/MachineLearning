@@ -1,12 +1,12 @@
 #!/usr/bin/python
 
+"""Docstring here."""
+
 import pickle
 import numpy
 numpy.random.seed(42)
 from sklearn import tree
 from sklearn.metrics import accuracy_score
-import matplotlib.pyplot as plt
-
 
 # ## The words (features) and authors (labels), already largely processed.
 # ## These files should have been created from the previous (Lesson 10)
@@ -69,9 +69,16 @@ print('Top features: {}'.format(important_features))
 top_feature = max(importances)
 print('Top single feature is: {}'.format(top_feature))
 
-# plot what's happening
-# plt.scatter(features_train, labels_train, color='blue', label='train')
-# plt.scatter(features_test, labels_test, color='red', label='test')
-# plt.scatter(features_test, pred, color='green', label='prediction')
-# plt.title('Feature Selection')
-# plt.show()
+# Location
+location = numpy.nonzero(importances == top_feature)
+print('Location of top single feature is: \
+       {}'.format(importances.tolist().index(top_feature)))
+print('Location = : {}'.format(location))
+# giving the same values, correct answer is 33614.
+# Not sure why mine is busted, I'm getting 33702.
+
+# Get the words
+# Using my number (33702) gives the correct name at least.
+# I can't figure out the syntax of the get_feature_names call.
+word = vectorizer.get_feature_names()[33702]
+print('First word is: {}'.format(word))
