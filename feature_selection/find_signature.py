@@ -59,15 +59,16 @@ print('Features Train: {} and Labels Train: {}'.format(len(features_train),
                                                        len(labels_train)))
 
 # Find the feature importances
-importances = sorted(clf.feature_importances_, reverse=True)
-important_features = importances[:4]
-# important_features = [importances[x] for x in importances if importances[x] /
-# > .2]
-print('Top features: {}'.format(important_features))
+importances = clf.feature_importances_
+# important_features = sorted(importances, reverse=True)
+# important_features_sliced = important_features[:4]
+# print('Top features: {}'.format(important_features_sliced))
 
 # Most important feature
 top_feature = max(importances)
+second_feature = importances.tolist().remove(max(importances))
 print('Top single feature is: {}'.format(top_feature))
+print('Second single feature is: {}'.format(second_feature))
 
 # Location
 location = numpy.nonzero(importances == top_feature)
@@ -80,5 +81,5 @@ print('Location = : {}'.format(location))
 # Get the words
 # Using my number (33702) gives the correct name at least.
 # I can't figure out the syntax of the get_feature_names call.
-word = vectorizer.get_feature_names()[33702]
-print('First word is: {}'.format(word))
+# word = vectorizer.get_feature_names()[14349]
+# print('First word is: {}'.format(word))

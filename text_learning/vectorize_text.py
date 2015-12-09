@@ -54,7 +54,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
 
             # ## use parseOutText to extract the text from the opened email
             bad_words = ['Sara', 'Chris', 'Germani', 'Shackleton',
-                         'sshacklensf']
+                         'sshacklensf', 'cgermannsf']
             raw_text = parseOutText(email, bad_words)
 
             # ## use str.replace() to remove any instances of the words
@@ -72,7 +72,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
             email.close()
 
 print("emails processed")
-print("from_data = {}".format(from_data))
+# print("from_data = {}".format(from_data))
 from_sara.close()
 from_chris.close()
 
