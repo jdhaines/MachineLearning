@@ -61,7 +61,8 @@ print('Features Train: {} and Labels Train: {}'.format(len(features_train),
 # Find the feature importances
 importances = sorted(clf.feature_importances_, reverse=True)
 important_features = importances[:4]
-# important_features = [importances[x] for x in importances if importances[x] > .2]
+# important_features = [importances[x] for x in importances if importances[x] /
+# > .2]
 print('Top features: {}'.format(important_features))
 
 # Most important feature

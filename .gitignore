@@ -4,6 +4,7 @@ enron_mail_20110402/
 enron_mail_20150507.tgz
 enron_mail_20150507.tar
 maildir/
+final_project/emails_by_address
 my_classifier.pkl
 my_dataset.pkl
 my_feature_list.pkl
