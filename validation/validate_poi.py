@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
-
 """
-    Starter code for the validation mini-project.
-    The first step toward building your POI identifier!
+Starter code for the validation mini-project.
 
-    Start by loading/formatting the data
+The first step toward building your POI identifier!
 
-    After that, it's not our code anymore--it's yours!
+Start by loading/formatting the data
+
+After that, it's not our code anymore--it's yours!
 """
 
 import pickle
@@ -30,8 +30,6 @@ labels, features = targetFeatureSplit(data)
 from sklearn.cross_validation import train_test_split
 features_train, features_test, labels_train, labels_test = train_test_split(
     features, labels, test_size=0.3, random_state=42)
-
-# ## it's all yours from here forward!
 
 # check the provided starter code statements for accuracy
 # print('Data Dict: {}'.format(data_dict))
